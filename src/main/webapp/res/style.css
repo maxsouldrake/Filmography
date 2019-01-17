@@ -1,0 +1,317 @@
+body {
+    background: url("background.jpg") no-repeat 50% 50% fixed;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 120%;
+    padding: 5px 0;
+    transition: 0.2s ease-in-out;
+    border-radius: 5px;
+    color: #000000;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+input:invalid:not(:placeholder-shown) {
+    border: 2px solid red;
+}
+
+
+.filter a {
+    background: linear-gradient(1deg, rgb(205, 230, 255), rgba(255, 255, 255, 0.9));
+    box-shadow: 2px 2px 25px rgba(0,0,0,0.3);
+}
+
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    opacity: 0.5;
+}
+
+a.selected {
+    box-shadow: 0 0 25px rgb(255,255,255);
+    background: linear-gradient(1deg, rgb(190, 200, 255), rgba(235, 245, 255, 0.9));
+}
+
+a.current-page {
+    pointer-events: none;
+    cursor: default;
+    font-size: 150%;
+    box-shadow: 0 0;
+}
+
+a:hover {
+    transition: 0.3s;
+    box-shadow: 0 0 25px rgb(255,255,255);
+}
+
+a:active {
+    background: linear-gradient(1deg, rgb(255, 255, 255), rgba(210, 210, 210, 0.9));
+}
+
+.link a {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    vertical-align: bottom;
+    background: url("icons.png") no-repeat;
+}
+
+.icon-add {
+    background-position: 0 0;
+    margin-right: 5px;
+    margin-left: 0;
+}
+
+.icon-delete {
+    background-position: -24px 0;
+}
+
+.icon-edit {
+    background-position: -49px 0;
+}
+
+.icon-required {
+    background-position: -74px 0;
+}
+
+.icon-find {
+    background-position: -99px 0;
+    margin: 0;
+    position:relative;
+    bottom: 4px;
+    right: 25px;
+    pointer-events: none;
+}
+
+.icon-first {
+    background-position: -125px 0;
+    margin: 0;
+}
+
+.icon-prev {
+    background-position: -147px 0;
+    margin: 0;
+}
+
+.icon-next {
+    background-position: -166px 0;
+    margin: 0;
+}
+
+.icon-last {
+    background-position: -188px 0;
+    margin: 0;
+}
+
+.icon-all {
+    background-position: -214px 0;
+}
+
+.icon-optional {
+    background-position: -240px 0;
+}
+
+.heading {
+    text-shadow: 2px 2px 5px #7F7F7F;
+    color: #e7f6ff;
+    font-size: 30px;
+}
+
+.style {
+    border-spacing: 0 12px;
+    font:  bold 100% Georgia, serif;
+    margin: 40px auto;
+    text-shadow: 1px 1px 1px #7F7F7F;
+    background: #0000;
+    text-align: center;
+    vertical-align: middle;
+    width: 60%;
+}
+
+.style th {
+    color: white;
+    background: rgba(0, 5, 25, 0.75);
+    padding: 10px;
+    font-size: 130%;
+    border-top: 1px solid #efeaea;
+    border-bottom: 1px solid #efeaea;
+    width: 1%;
+}
+
+.style td {
+    width: 1%;
+    padding: 5px;
+}
+
+.style tr {
+    height: 50px;
+    box-shadow: 0 0 5px rgb(15,15,45);
+}
+
+.style tr:nth-child(even) {
+    background: linear-gradient(1deg, rgb(180, 210, 255), rgba(255, 255, 255, 0.9));
+}
+
+.style tr:nth-child(odd) {
+    background: linear-gradient(1deg, rgb(205, 230, 255), rgba(255, 255, 255, 0.9));
+}
+
+.style input {
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background: linear-gradient(1deg, rgb(205, 230, 255), rgba(255, 255, 255, 0.9));
+    outline: none;
+    height: 30px;
+    width: 300px;
+    font:  bold 20px Georgia, serif;
+    text-align: center;
+    text-shadow: 1px 1px 1px #7F7F7F;
+    box-shadow: 3px 3px 25px rgb(15,15,45);
+}
+
+.checkbox label {
+    display: block;
+    border-radius: 3px;
+    background: linear-gradient(1deg, rgb(180, 200, 220), rgba(255, 255, 255, 0.9));
+    padding-top: 5px;
+    height: 25px;
+    width: 300px;
+    font-size: 20px;
+    box-shadow: 3px 3px 25px rgb(15,15,45);
+    margin: auto;
+    color: rgba(0,0,0,0.2);
+    text-shadow: 0 0;
+    cursor: pointer;
+}
+
+.checkbox label::selection, .checkbox span::selection {
+    background: transparent;
+}
+
+.checkbox label:hover {
+    box-shadow: 0 0 25px rgb(155,155,155);
+}
+
+.checkbox label:active {
+    box-shadow: 0 0 25px rgb(255,255,255);
+}
+
+.checkbox input[type=checkbox] {
+    display: none;
+}
+
+.checkbox-common {
+    display: block;
+    height: 30px;
+    width: 40px;
+    position:relative;
+    margin: auto;
+    font-size: 25px;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px 1px #7F7F7F;
+}
+
+.checkbox-yes {
+    bottom: 57px;
+    left: 100px;
+    opacity:0;
+}
+
+.checkbox-no {
+    bottom: 27px;
+    right: 100px;
+}
+
+#required:checked ~ .checkbox-yes {
+    opacity:1;
+}
+
+#required:checked ~ .checkbox-no {
+    opacity:0;
+}
+
+input[type=submit] {
+    width: 100px;
+    height: 35px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+input[type=submit]:active {
+    transition: 0s;
+    background: linear-gradient(1deg, rgb(255, 255, 255), rgba(210, 210, 210, 0.9));
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    display: none;
+}
+
+input:hover {
+    box-shadow: 0 0 25px rgb(155,155,155);
+}
+
+input:focus {
+    box-shadow: 0 0 25px rgb(255,255,255);
+}
+
+::-webkit-input-placeholder {
+    font:  bold 100% Georgia, serif;
+    color: rgba(0,0,0,0.2);
+    text-shadow: 0 0;
+}
+
+.null-quantity {
+    background: radial-gradient(circle farthest-side, rgb(255, 210, 210), transparent);
+}
+
+.left-side {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.right-side {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.title {
+    text-align: left;
+    font-size: 130%;
+}
+
+.filter form {
+    float: left;
+    margin: auto auto auto 30px;
+}
+
+.filter div{
+    float: right;
+    margin: auto 30px auto auto;
+}
+
+.filter input[type=search] {
+    width: 150px;
+}
+
+.filter input[type=submit] {
+    width: 30px;
+    height: 30px;
+    vertical-align: bottom;
+}
+
+.sign {
+    color: #e7f6ff;
+    font-size: 20px;
+}
