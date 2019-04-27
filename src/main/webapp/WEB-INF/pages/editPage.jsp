@@ -32,15 +32,16 @@
               oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
     <p><input type="text" name="genre" placeholder="genre" value="${film.genre}" maxlength="20" required>
     <p class="checkbox">
-        <c:if test="${film.watched == true}">
-            <input type="checkbox" name="watched" id="watched" value="${film.watched}" checked>
-        </c:if>
-        <c:if test="${film.watched != true}">
-            <input type="checkbox" name="watched" id="watched">
-        </c:if>
-        <span class="checkbox-common checkbox-no">no</span>
-        <label for="watched">watched</label>
-        <span class="checkbox-common checkbox-yes">yes</span>
+        <label for="watched">watched
+            <c:if test="${film.watched == true}">
+                <input type="checkbox" name="watched" id="watched" value="${film.watched}" checked>
+            </c:if>
+            <c:if test="${film.watched != true}">
+                <input type="checkbox" name="watched" id="watched">
+            </c:if>
+            <span class="checkbox-common checkbox-no">no</span>
+            <span class="checkbox-common checkbox-yes">yes</span>
+        </label>
     </p>
     <p>
         <c:set value="add" var="add"/>

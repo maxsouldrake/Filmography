@@ -18,12 +18,6 @@ input:invalid:not(:placeholder-shown) {
     border: 2px solid red;
 }
 
-
-.filter a {
-    background: linear-gradient(1deg, rgb(205, 230, 255), rgba(255, 255, 255, 0.9));
-    box-shadow: 2px 2px 25px rgba(0,0,0,0.3);
-}
-
 a.disabled {
     pointer-events: none;
     cursor: default;
@@ -81,17 +75,8 @@ a:active {
     background-position: -49px 0;
 }
 
-.icon-required {
+.icon-watched {
     background-position: -74px 0;
-}
-
-.icon-find {
-    background-position: -99px 0;
-    margin: 0;
-    position:relative;
-    bottom: 4px;
-    right: 25px;
-    pointer-events: none;
 }
 
 .icon-first {
@@ -112,14 +97,6 @@ a:active {
 .icon-last {
     background-position: -188px 0;
     margin: 0;
-}
-
-.icon-all {
-    background-position: -214px 0;
-}
-
-.icon-optional {
-    background-position: -240px 0;
 }
 
 .heading {
@@ -234,11 +211,11 @@ a:active {
     right: 100px;
 }
 
-#required:checked ~ .checkbox-yes {
+#watched:checked ~ .checkbox-yes {
     opacity:1;
 }
 
-#required:checked ~ .checkbox-no {
+#watched:checked ~ .checkbox-no {
     opacity:0;
 }
 
@@ -272,10 +249,6 @@ input:focus {
     text-shadow: 0 0;
 }
 
-.null-quantity {
-    background: radial-gradient(circle farthest-side, rgb(255, 210, 210), transparent);
-}
-
 .left-side {
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
@@ -289,29 +262,4 @@ input:focus {
 .title {
     text-align: left;
     font-size: 130%;
-}
-
-.filter form {
-    float: left;
-    margin: auto auto auto 30px;
-}
-
-.filter div{
-    float: right;
-    margin: auto 30px auto auto;
-}
-
-.filter input[type=search] {
-    width: 150px;
-}
-
-.filter input[type=submit] {
-    width: 30px;
-    height: 30px;
-    vertical-align: bottom;
-}
-
-.sign {
-    color: #e7f6ff;
-    font-size: 20px;
 }
