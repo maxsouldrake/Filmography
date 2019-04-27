@@ -55,6 +55,7 @@ public class FilmServiceImpl implements FilmService {
     }
 
     @Override
+    @Transactional
     public boolean checkTitle(String title) {
         return filmDAO.checkTitle(title);
     }
